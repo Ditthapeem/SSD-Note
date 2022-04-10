@@ -177,3 +177,6 @@ In common usage, requirements are categorized as functional (behavioral) or non-
 </br>
 
 # 6. USE-CASE MODEL: WRITING REQUIREMENTS IN CONTEXT
+
+[Use-case template](https://docs.google.com/document/d/1Shx4J72A3HCzzHVCildE-UDN4dJOiZ5OKI3EdoAA42w/edit) (KU-mail)  
+Example: [use-case model](https://docs.google.com/document/d/1aC0IudRNPjrG9g-y2AHBf5j9GEzy-6HkX6juhp0B0W8/edit) (KU-mail)
