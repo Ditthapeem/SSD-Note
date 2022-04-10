@@ -20,6 +20,7 @@
   - [4.3 What Artifacts May Start in Inception?](#43-what-artifacts-may-start-in-inception)
 - [5. UNDERSTANDING REQUIREMENTS](#5-understanding-requirements)
   - [5.1 Types of Requirement](#51-types-of-requirement)
+- [6. USE-CASE MODEL: WRITING REQUIREMENTS IN CONTEXT](#6-use-case-model-writing-requirements-in-context)
 
 
 
@@ -123,6 +124,7 @@ Some requirements exploration **but not define all the requirements**. The incep
 one or a few weeks long.
 
 **Note**: It is to decide if the project is worth a serious investigation (during elaboration), not to do that investigation.
+
 ![image6](/image/6.png) </br>
 </br>
 
@@ -177,6 +179,20 @@ In common usage, requirements are categorized as functional (behavioral) or non-
 </br>
 
 # 6. USE-CASE MODEL: WRITING REQUIREMENTS IN CONTEXT
+  -[6.1 Use Cases and Adding Value](#61-use-cases-and-adding-value)
 
 [Use-case template](https://docs.google.com/document/d/1Shx4J72A3HCzzHVCildE-UDN4dJOiZ5OKI3EdoAA42w/edit) (KU-mail)  
-Example: [use-case model](https://docs.google.com/document/d/1aC0IudRNPjrG9g-y2AHBf5j9GEzy-6HkX6juhp0B0W8/edit) (KU-mail)
+Example: [use-case model](https://docs.google.com/document/d/1aC0IudRNPjrG9g-y2AHBf5j9GEzy-6HkX6juhp0B0W8/edit) (KU-mail)   
+    
+    A stories of using a system to meet goals.
+    A collection of related success and failure scenarios that describe actors using a system to support a goal.
+
+## 6.1 Use Cases and Adding Value
+| Use Cases component | Definition |
+| ------------| -----------|
+| actor  |  It is something with behavior, such as a person (identified by role), computer system |
+| scenario | A specific sequence of actions and interactions between actors and the system under discussion |
+
+**Note** Take a look on [Use-case template](https://docs.google.com/document/d/1Shx4J72A3HCzzHVCildE-UDN4dJOiZ5OKI3EdoAA42w/edit) to see other component.
+
+
