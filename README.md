@@ -1,0 +1,2 @@
+# SSD-Note
+READ ONLY
