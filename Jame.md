@@ -21,6 +21,20 @@
 - [5. UNDERSTANDING REQUIREMENTS](#5-understanding-requirements)
   - [5.1 Types of Requirement](#51-types-of-requirement)
 - [6. USE-CASE MODEL: WRITING REQUIREMENTS IN CONTEXT](#6-use-case-model-writing-requirements-in-context)
+  - [6.1 Use Cases and Adding Value](#61-use-cases-and-adding-value)
+  - [6.2 Use Cases and Functional Requirements](#62-use-cases-and-functional-requirements)
+  - [6.3 Goals and Scope of a Use Case](#63-goals-and-scope-of-a-use-case)
+    - [6.3.1 Scope of Use case](#631-scope-of-use-case)
+    - [6.3.2 Goals of use case](#632-goals-of-use-case)
+  - [6.4 Finding Primary Actors, Goals, and Use Cases](#64-finding-primary-actors-goals-and-use-cases)
+  - [6.5 Actors](#65-actors)
+  - [6.6 Requirements in Context and Low-Level Feature Lists](#66-requirements-in-context-and-low-level-feature-lists)
+      - [6.6.1 High-Level System Feature Lists](#661-high-level-system-feature-lists)
+  - [6.7 Use Cases Within the UP](#67-use-cases-within-the-up)
+      - [6.7.1 Use Cases and Requirements Specification Across the Iterations](#671-use-cases-and-requirements-specification-across-the-iterations)
+      - [6.7.2 Use Cases Within Inception](#672-use-cases-within-inception)
+      - [6.7.3 Use Cases Within Elaboration](#673-use-cases-within-elaboration)
+      - [6.7.4 Use Cases Within Construction](#674-use-cases-within-construction)
 
 
 
@@ -180,6 +194,19 @@ In common usage, requirements are categorized as functional (behavioral) or non-
 
 # 6. USE-CASE MODEL: WRITING REQUIREMENTS IN CONTEXT
   - [6.1 Use Cases and Adding Value](#61-use-cases-and-adding-value)
+  - [6.2 Use Cases and Functional Requirements](#62-use-cases-and-functional-requirements)
+  - [6.3 Goals and Scope of a Use Case](#63-goals-and-scope-of-a-use-case)
+    - [6.3.1 Scope of Use case](#631-scope-of-use-case)
+    - [6.3.2 Goals of use case](#632-goals-of-use-case)
+  - [6.4 Finding Primary Actors, Goals, and Use Cases](#64-finding-primary-actors-goals-and-use-cases)
+  - [6.5 Actors](#65-actors)
+  - [6.6 Requirements in Context and Low-Level Feature Lists](#66-requirements-in-context-and-low-level-feature-lists)
+      - [6.6.1 High-Level System Feature Lists](#661-high-level-system-feature-lists)
+  - [6.7 Use Cases Within the UP](#67-use-cases-within-the-up)
+      - [6.7.1 Use Cases and Requirements Specification Across the Iterations](#671-use-cases-and-requirements-specification-across-the-iterations)
+      - [6.7.2 Use Cases Within Inception](#672-use-cases-within-inception)
+      - [6.7.3 Use Cases Within Elaboration](#673-use-cases-within-elaboration)
+      - [6.7.4 Use Cases Within Construction](#674-use-cases-within-construction)
 
 [Use-case template](https://docs.google.com/document/d/1Shx4J72A3HCzzHVCildE-UDN4dJOiZ5OKI3EdoAA42w/edit) (KU-mail)  
 Example: [use-case model](https://docs.google.com/document/d/1aC0IudRNPjrG9g-y2AHBf5j9GEzy-6HkX6juhp0B0W8/edit) (KU-mail)   
@@ -187,12 +214,100 @@ Example: [use-case model](https://docs.google.com/document/d/1aC0IudRNPjrG9g-y2A
     A stories of using a system to meet goals.
     A collection of related success and failure scenarios that describe actors using a system to support a goal.
 
+![image8](/image/8.png)
+
 ## 6.1 Use Cases and Adding Value
 | Use Cases component | Definition |
 | ------------| -----------|
-| actor  |  It is something with behavior, such as a person (identified by role), computer system |
-| scenario | A specific sequence of actions and interactions between actors and the system under discussion |
+| [Goals](#goals-of-use-case) | The thing that user want to achive by using application. |
+| [Actors](#65-actors)  |  It is something with behavior, such as a person (identified by role), computer system |
+| Scenario | A specific sequence of actions and interactions between actors and the system under discussion |
 
 **Note** Take a look on [Use-case template](https://docs.google.com/document/d/1Shx4J72A3HCzzHVCildE-UDN4dJOiZ5OKI3EdoAA42w/edit) to see other component.
 
+A key attitude in use case work is to focus on the question "How can using the system provide observable value to the user, or fulfill their goals?", rather than merely thinking of system requirements in terms of a "laundry list" of features or functions.
 
+## 6.2 Use Cases and Functional Requirements
+Use cases are requirements that indicate what the system will do. Use cases define a promise or contract of how a system will behave.
+
+    Use cases are requirements
+
+**Note** Use cases are text documents, not diagrams</br>
+</br>
+
+## 6.3 Goals and Scope of a Use Case
+
+### 6.3.1 Scope of Use case
+![image7](/image/7.png)
+
+EBP : A task performed by one person in one place at one time, in response to a business event, which adds measurable business
+value and leaves the data in a consistent state.  
+**Note** Use case is not fail as an EBP if two people are required, or if a person has to walk around.</br>
+</br>
+
+### 6.3.2 Goals of use case
+Actors have goals (or **needs**) and use applications to help satisfy them. In fact, the name of a use case for a user goal should reflect its name</br>
+</br>
+
+## 6.4 Finding Primary Actors, Goals, and Use Cases
+
+| Finding Step | 
+| ------------| 
+| Step 1: Choosing the System Boundary | 
+| Steps 2 and 3: Finding Primary [Actors](#65-actors) and Goals  | 
+| Step 4: Define Use Cases |    
+
+**Note** An actor depent on boundary.</br>   
+![image9](/image/9.png)
+
+## 6.5 Actors
+An actor is anything with behavior, including the system. Actors are not only roles played by people, but organizations, software, and machines.
+
+| Actor |           | Why identify?
+| ------------| ------------| ------------|
+| Primary actor | has user goals fulfilled through using services of the SuD. | To find user goals, which drive the use cases.|
+| Supporting actor | provides a service (for example, information) to the SuD. |To clarify external interfaces and protocols.|
+| Offstage actor | has an interest in the behavior of the use case, but is not primary or supporting.  | To ensure that all necessary interests are identified and satisfied. |
+
+**Note** SuD : system under discussion.</br>
+</br>
+
+## 6.6 Requirements in Context and Low-Level Feature Lists
+Some non-functional requirements, domain rules and context, and other hard-to-place elements are better captured in the Supplementary Specification. One idea behind use cases is to replace detailed, low-level feature lists. These lists tended to look as follows, usually grouped into functional areas:  
+
+![image10](/image/10.png)</br>
+</br>
+
+### 6.6.1 High-Level System Feature Lists
+The list provides a very succinct summary of system functionality, independent of the use case view.</br>
+</br>
+![image11](/image/11.png)</br>
+</br>
+
+## 6.7 Use Cases Within the UP
+Use cases are vital and central to the UP, which encourages use-case driven development.  
+This mean: 
+1. Requirements are primarily recorded in use cases
+2. Use cases are an important part of iterative planning.
+3. Use-case realizations drive the design. That is, the team designs collabo rating objects and subsystems in order to perform or realize the use cases.
+4. Use cases often influence the organization of user manuals
+
+**Note** Business use cases are less commonly written.
+
+### 6.7.1 Use Cases and Requirements Specification Across the Iterations
+</br>
+
+![image12](/image/12.png)</br>
+</br>
+
+### 6.7.2 Use Cases Within Inception
+Not all use cases are written in their fully dressed format during the inception phase. In order to decide if the project is worth significant investigation (that is, the elaboration phase). The inception work is not meant to do that investigation, but to obtain low-fidelity (and admittedly error-prone) insights regarding scope, risk, effort, technical feasibility, and business case, in order to decide to move forward, where to start if they do, or if to stop.</br>
+</br>
+
+### 6.7.3 Use Cases Within Elaboration
+This is a phase of multiple timeboxed iterations (for example, four iterations) in which risky, high-value, or architecturally significant parts of the system are incrementally built, and the "majority" of requirements identified and clarified. </br>
+</br>
+
+### 6.7.4 Use Cases Within Construction
+The construction step is composed of timeboxed iterations that focus on completing the system, once the risky and
+core unstable issues have settled down in elaboration. There will still be some **minor** use case writing
