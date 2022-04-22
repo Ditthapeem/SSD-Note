@@ -1,5 +1,5 @@
 # SSD Note
-[Applying Uml And Patterns](https://personal.utdallas.edu/~chung/SP/applying-uml-and-patterns.pdf)
+[Applying UML And Patterns](https://personal.utdallas.edu/~chung/SP/applying-uml-and-patterns.pdf)
 
 ## PART I INTRODUCTION
 - [SSD Note](#ssd-note)
@@ -35,6 +35,17 @@
       - [6.7.2 Use Cases Within Inception](#672-use-cases-within-inception)
       - [6.7.3 Use Cases Within Elaboration](#673-use-cases-within-elaboration)
       - [6.7.4 Use Cases Within Construction](#674-use-cases-within-construction)
+- [7. IDENTIFYING OTHER REQUIREMENTS](#7-identifying-other-requirements)
+  - [7.1 Commentary: Supplementary Specification](#71-commentary-supplementary-specification)
+  - [7.1.1 Quality Attributes](#711-quality-attributes)
+  - [7.1.2 Domain (Business) Rules](#712-domain-business-rules)
+  - [7.1.3 Information in Domains of Interest](#723-other-requirements-in-the-vision)
+- [7.2 Commentary: Vision](#72-commentary-vision)
+  - [7.2.1 System FeaturesóFunctional Requirements](#721-system-featuresófunctional-requirements)
+  - [7.2.2 Other Requirements in the Vision](#722-other-requirements-in-the-vision)
+  - [7.2.3 Vision, Features, or Use Cases Which First?](#723-vision-features-or-use-cases-which-first)
+- [7.3 Commentary: Glossary (Data Dictionary)](#73-commentary-glossary-data-dictionary)
+  - [7.3.1 Glossary as Data Dictionary](#731-glossary-as-data-dictionary)
 
 
 
@@ -310,4 +321,111 @@ This is a phase of multiple timeboxed iterations (for example, four iterations) 
 
 ### 6.7.4 Use Cases Within Construction
 The construction step is composed of timeboxed iterations that focus on completing the system, once the risky and
-core unstable issues have settled down in elaboration. There will still be some **minor** use case writing
+core unstable issues have settled down in elaboration. There will still be some **minor** use case writing</br>
+</br>
+
+# 7. IDENTIFYING OTHER REQUIREMENTS
+- [7.1 Commentary: Supplementary Specification](#71-commentary-supplementary-specification)
+  - [7.1.1 Quality Attributes](#711-quality-attributes)
+  - [7.1.2 Domain (Business) Rules](#712-domain-business-rules)
+  - [7.1.3 Information in Domains of Interest](#723-other-requirements-in-the-vision)
+- [7.2 Commentary: Vision](#72-commentary-vision)
+  - [7.2.1 System FeaturesóFunctional Requirements](#721-system-featuresófunctional-requirements)
+  - [7.2.2 Other Requirements in the Vision](#722-other-requirements-in-the-vision)
+  - [7.2.3 Vision, Features, or Use Cases Which First?](#723-vision-features-or-use-cases-which-first)
+- [7.3 Commentary: Glossary (Data Dictionary)](#73-commentary-glossary-data-dictionary)
+  - [7.3.1 Glossary as Data Dictionary](#731-glossary-as-data-dictionary)
+
+## 7.1 Commentary: Supplementary Specification
+**The Supplementary Specification** captures other requirements, information, and constraints not easily captured in the use cases or Glossary, including system-wide "URPS+" quality attributes or requirements. Supplementary Specification.. Elements of the Supplementary Specification could include:       
+1. FURPS+
+2. reports 
+3. hardware and software constraints (operating and networking systems, ...) 
+4. development constraints (for example, process or development tools)
+5. other design and implementation constraints 
+6. internationalization concerns (units, languages, ...) 
+7. documentation (user, installation, administration) and help
+8. licensing and other legal concerns 
+9. packaging
+10. standards (technical, safety, quality)
+11. physical environment concerns (for example, heat or vibration)
+12. operational concerns (for example, how do errors get handled, or how often to do backups?) 
+13. domain or business rules
+14. information in domains of interest (for example, what is the entire cycle of credit payment handling?) 
+
+**Constraints** are not behaviors, but some other kind of restriction on the design or project. They are also requirements, but are commonly called "constraints" to emphasize their restrictive influence.</br>
+</br>
+
+![image13](/image/13.png)</br>
+</br>
+
+### 7.1.1 Quality Attributes 
+Some requirements are called **quality attributes** of a system. These refer to the qualities of the system. They are of two types:
+1. Observable at execution (functionality, usability, reliability, performance, ...)
+2. Not observable at execution (supportability, testability, ...) 
+
+### 7.1.2 Domain (Business) Rules
+It is often useful to identify and record those domain rules that influence the requirements, usually realized in the use cases, because they can clarify incomplete or ambiguous use case content.</br>
+</br>
+
+![image14](/image/14.png)</br>
+</br>
+
+### 7.1.3 Information in Domains of Interest
+An explanation of domains related to the new software system to provide context and deeper insight for the development team. It may contain pointers to important literature or experts, formulas, laws, or other references.
+
+## 7.2 Commentary: Vision
+| Are We Solving the Same Problem? The Right Problem?          | |
+| ------------| ------------| 
+| The Problem Statement| In the inception phase, collaborate to define a terse problem statement| 
+| The Key High-Level Goals and Problems of the Stakeholders | <center>![image15](/image/15.png)</br> </br>This table summarizes the goals and problems at a higher level than task level use cases|
+|What Are the Root Problems and Goals?| Sometimes stakeholder jump to solutions that are not the most appropriate or do not address the root underlying major problems. |
+| Group Idea Facilitation Methods | Techniques to discover root problems and goals, and support idea generation and prioritization |
+
+### 7.2.1 System Features Functional Requirements
+
+Use cases are not necessarily Why?
+1. Stakeholders often want a short summary that identifies the most noteworthy functions.
+2. The list may still be too long. Also, the names can hide interesting functionality stakeholders really want to know about
+3. Some noteworthy functionality is naturally expressed as short statements that do not conveniently map to use case names or Elementary Business Process-level goals
+
+Therefore, an alternative, a complementary way to express system functions is with features, or more specifically in this context, system features, which are high-level, terse statements summarizing system functions.
+
+![image16](/image/16.png)</br>
+
+**Vision** may be used as a formal or informal contract between development and business. System features are a mechanism to summarize in this contract what the system will do. This is complementary to the use cases, as the features are terse.
+
+### 7.2.2 Other Requirements in the Vision
+Vision can summarize other requirements (for example, reliability and usability) that are detailed in the Special Requirements sections of use cases, and in the Supplementary Specification
+
+![image17](/image/17.png)
+
+### 7.2.3 Vision, Features, or Use Cases Which First?
+1. Write a brief first draft of the Vision. 
+2. Identify user goals and the supporting use cases. 
+3. Write some use cases and start the Supplementary Specification.
+4. Refine the Vision, summarizing information from these. 
+
+## 7.3 Commentary: Glossary (Data Dictionary)
+**Glossary** is a list of noteworthy, unclear, ambiguous, terms and their definitions. It is surprisingly common that a term, often technical or particular to the domain
+
+![image18](/image/18.png)
+
+### 7.3.1 Glossary as Data Dictionary
+Glossary a data dictionary, a document that records data about the dataóthat is, metadata.
+Term attributes could include:
+1. aliases
+2. description 
+3. format (type, length, unit)
+4. relationships to other elements
+5. range of values
+6. validation rules
+
+**Units**  must be considered, especially in this age of internationalized software applications.
+
+The Glossary is not only for atomic terms It can and should include composite elements and nicknames used to describe a collection of
+data transmitted between actors in the use cases
+
+![image19](/image/19.png)
+
+Instead of being plain static documents, they may be hyperlinked, or recorded in tools other than a word processor or spreadsheet.
