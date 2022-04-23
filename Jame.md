@@ -46,7 +46,10 @@
   - [7.2.3 Vision, Features, or Use Cases Which First?](#723-vision-features-or-use-cases-which-first)
 - [7.3 Commentary: Glossary (Data Dictionary)](#73-commentary-glossary-data-dictionary)
   - [7.3.1 Glossary as Data Dictionary](#731-glossary-as-data-dictionary)
-
+- [8.FROM INCEPTION TO ELABORATION](#8from-inception-to-elaboration)
+  - [8.1 On to Elaboration](#81-on-to-elaboration)
+  - [8.2 Planning the Next Iteration](#82-planning-the-next-iteration)
+  - [8.3 Iteration 1 Requirements and Emphasis: Fundamental OOA/D Skills](#83-iteration-1-requirements-and-emphasis-fundamental-ooad-skills)
 
 
 # 1. Object-Oriented Analysis and Design
@@ -429,3 +432,47 @@ data transmitted between actors in the use cases
 ![image19](/image/19.png)
 
 Instead of being plain static documents, they may be hyperlinked, or recorded in tools other than a word processor or spreadsheet.
+
+# 8.FROM INCEPTION TO ELABORATION
+- [8.1 On to Elaboration](#81-on-to-elaboration)
+- [8.2 Planning the Next Iteration](#82-planning-the-next-iteration)
+- [8.3 Iteration 1 Requirements and Emphasis: Fundamental OOA/D Skills](#83-iteration-1-requirements-and-emphasis-fundamental-ooad-skills)
+
+## 8.1 On to Elaboration
+Elaboration is the initial series of iterations during which the team does serious investigation, implements (programs and tests) the core architecture, clarifies most requirements, and tackles the high-risk issues.
+
+![image20](/image/20.png)
+
+Some key ideas and best practices that will manifest in elaboration include:
+1. do short timeboxed risk-driven iterations
+2. start programming early 
+3. adaptively design, implement, and test the core and risky parts of the architecture
+4. test early, often, realistically 
+5. adapt based on feedback from tests, users, developers 
+6. write most of the use cases and other requirements in detail, through a series of workshops, once per elaboration iteration   </br>
+
+Elaboration phase testing is important, to obtain feedback, adapt, and prove that the core is robust.
+
+## 8.2 Planning the Next Iteration
+Planning and project management are important but large topics. Some key ideas are briefly presented.Organize requirements and iterations by risk, coverage, and criticality.
+1. **Risk** includes both technical complexity and other factors, such as uncer tainty of effort or usability.
+2. **Coverage** implies that all major parts of the system are at least touched on in early iterations perhaps a "wide and shallow" implementation across many components.
+3. **Criticality** refers to functions of high business value.
+
+In terms of UP artifacts:
+1. The chosen requirements for the next iteration are briefly listed in an **Iteration Plan**. This is not a plan of all the iterations, only a plan of the next. 
+2. A task or requirement for the iteration may be written in greater detail in a separate **Change Request**, and given to the responsible party. 
+3. The overall requirements ranking is recorded in the **Software Development Plan**.
+
+## 8.3 Iteration 1 Requirements and Emphasis: Fundamental OOA/D Skills
+Iteration 1 of the elaboration phase emphasizes a range of fundamental and common OOA/D skills used in building object systems, such as assigning responsibilities to objects.
+
+Iteration 1 Requirements
+1. Implement a basic, key scenario
+2. Implement a Start Up use case as necessary to support the initialization needs of the iteration. 
+3. Nothing fancy or complex is handled, just a simple happy path scenario, and the design and implementation to support it
+4. There is no collaboration with external services.
+5. No complex pricing rules are applied. </br>
+</br>
+
+       Incremental Development for the Same Use Case Across Iterations
