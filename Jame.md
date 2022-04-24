@@ -50,6 +50,8 @@
   - [8.1 On to Elaboration](#81-on-to-elaboration)
   - [8.2 Planning the Next Iteration](#82-planning-the-next-iteration)
   - [8.3 Iteration 1 Requirements and Emphasis: Fundamental OOA/D Skills](#83-iteration-1-requirements-and-emphasis-fundamental-ooad-skills)
+## PART III ELABORATION ITERATION 1
+
 
 
 # 1. Object-Oriented Analysis and Design
@@ -476,3 +478,23 @@ Iteration 1 Requirements
 </br>
 
        Incremental Development for the Same Use Case Across Iterations
+
+# 9. Use-Case Model: Drawing System Sequence Diagrams
+
+**Sequence Diagrams**: describe the system behavior, what a system does, without explaining how it does it, a picture that shows, for a particular scenario of a use case, the events that external actors generate, their order, and inter-system events to illustrate collaborations between systems.   
+![image21](/image/21.png)
+
+SSDs and Use Cases: An SSD shows system events for a scenario of a use case, therefore it is generated from inspection of a use case.
+
+![image22](/image/22.png)</br>
+
+**Note**: 
+1. The boundary is very important(Take a look at [Chapter6](#63-goals-and-scope-of-a-use-case))
+2. Naming should be expressed at the level of intent rather than in terms of the physical input medium or interface widget level.
+
+## 9.1 SSDs Within the UP
+SSDs are part of the Use-Case Model a visualization of the interactions implied in the use cases.   
+**Inception**: SSDs are not usually motivated in inception.   
+**Elaboration**: Most SSDs are created during elaboration, when it is useful to identify the details of the system events to clarify what major operations the system must be designed to handle, 
+
+![imgae23](/image/23.png)
