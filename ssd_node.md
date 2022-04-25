@@ -546,3 +546,7 @@ A weakness of this approach is the imprecision of natural language; different no
 
 **Note**: The most common mistake when creating a domain model is to represent something as an attribute when it should have been a concept.
 
+## 10.3 Lowering the Representational Gap
+Choosing names that reflect the domain vocabulary (Sale) enhances quick comprehension and provides a clue as to what to expect from the chunk of code
+
+**representational gap** or semantic gap—the gap between our mental model of the domain and its representation in software.
