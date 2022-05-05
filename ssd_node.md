@@ -53,6 +53,22 @@
 ## PART III ELABORATION ITERATION 1
 - [9. Use-Case Model: Drawing System Sequence Diagrams](#9-use-case-model-drawing-system-sequence-diagrams)
   - [9.1 SSDs Within the UP](#91-ssds-within-the-up)
+- [10. IN MODEL VISUALIZING CONCEPTS](#10-in-model-visualizing-concepts)
+  - [10.1 Domain Models](#101-domain-models)
+  - [10.2 Conceptual Class Identification](#102-conceptual-class-identification)  
+  - [10.3 Lowering the Representational Gap](#103-lowering-the-representational-gap)
+- [16. GRASP: Designing Objects with Responsibilities](#16-grasp-designing-objects-with-responsibilities)
+  - [16.1 Information Expert (or Expert)](#161-information-expert-or-expert)
+  - [16.2 Creator](#162-creator)
+  - [16.3 Low Coupling](#163-low-coupling)
+  - [16.4 Controller](#164-controller)
+## PART IV ELABORATION ITERATION 2
+- [22. GRASP: More Patterns for Assigning Responsibilities](#22-grasp-more-patterns-for-assigning-responsibilities)
+  - [22.1 Polymorphism](#221-polymorphism)
+  - [22.2 Fabrication](#222-fabrication)
+  - [22.3 Indirection](#223-indirection)
+  - [22.4 Protected Variations](#224-protected-variations)
+
 
 
 
@@ -503,6 +519,9 @@ SSDs are part of the Use-Case Model a visualization of the interactions implied 
 ![imgae23](/image/23.png)
 
 # 10. IN MODEL VISUALIZING CONCEPTS
+- [10.1 Domain Models](#101-domain-models)
+- [10.2 Conceptual Class Identification](#102-conceptual-class-identification)
+- [10.3 Lowering the Representational Gap](#103-lowering-the-representational-gap)
 
 ## 10.1 Domain Models
 **Domain model** is a visual representation of conceptual classes or real-world objects in a domain of interest also been called **conceptual models**
@@ -553,3 +572,139 @@ Choosing names that reflect the domain vocabulary (Sale) enhances quick comprehe
 </br>
 ![image28](/image/28.png)
 
+# 16. GRASP: Designing Objects with Responsibilities
+- [16.1 Information Expert (or Expert)](#161-information-expert-or-expert)
+- [16.2 Creator](#162-creator)
+- [16.3 Low Coupling](#163-low-coupling)
+- [16.4 Controller](#164-controller)
+
+The UML defines a **responsibility**, these responsibilities are of the following two types:
+1. Doing responsibilities of an object include:  
+1.1 doing something itself.   
+1.2 initiating action in other objects.  
+1.3 controlling and coordinating activities in other objects.
+2. Knowing responsibilities of an object include:  
+2.1 knowing about private encapsulated data.  
+2.2 knowing about related objects.     
+2.3 knowing about things it can derive or calculate.
+
+## 16.1 Information Expert (or Expert)
+
+**Solution**: Assign a responsibility to the information expertóthe class that has the information necessary to fulfill the responsibility.  
+**Problem**: A Design Model may define hundreds or thousands of software classes, and an application may require hundreds or thousands of responsibilities to be fulfilled.    
+**Contraindications**: The logical extension of this decision is that each class has its own services to save
+itself in a database. But this leads to problems in cohesion, coupling, and duplication.   
+**Benefits**: 
+1. Information encapsulation is maintained, since objects use their own information to fulfill tasks. This usually supports low coupling, which leads to more robust and maintainable systems.  
+2. Behavior is distributed across the classes that have the required information, thus encouraging more cohesive "lightweight" class definitions that are easier to understand and maintain.  
+
+**Related Patterns or Principles**:
+1. Low Coupling
+2. High Cohesion
+
+## 16.2 Creator
+
+**Solution**: Assign class B the responsibility to create an instance of class A if one or more of
+the following is true:  
+1. B aggregates A objects.
+2. B contains A objects. 
+3. B records instances of A objects. 
+4. B closely uses A objects. 
+5. B has the initializing data that will be passed to A when it is created.
+
+**Problem**: Who should be responsible for creating a new instance of some class?
+
+**Contraindications**: Creation requires significant complexity and based upon some external property value.
+
+**Benefits**: Low coupling (described next) is supported, which implies lower maintenance dependencies and higher opportunities for reuse.
+
+**Related Patterns or Principles**:
+1. Low Coupling
+2. Factory
+
+## 16.3 Low Coupling
+**Solution**: Assign a responsibility so that coupling remains low.  
+**Problem**: How to support low dependency, low change impact, and increased reuse?
+
+**Note**: Coupling is a measure of how strongly one element is connected to, has knowledge of, or relies on other elements. An element with low (or weak) coupling is not dependent on too many other elements.
+
+**Contraindications**: the grouping of responsibilities or code into one class or component to simplify maintenance by one personóalthough be warned that such grouping may also make maintenance worse.
+
+**Benefits**:   
+1. Clarity and ease of comprehension of the design is increased.
+2. Maintenance and enhancements are simplified. 
+3. Low coupling is often supported. 
+4. The fine grain of highly related functionality supports increased reuse because a cohesive class can be used for a very specific purpose.
+
+## 16.4 Controller
+**Solution**: Assign the responsibility for receiving or handling a system event message to a class representing one of the following choices:  
+1. Represents the overall system, device, or subsystem (facade controller).
+2. Represents a use case scenario within which the system event occurs.
+
+**Problem**: A Controller is a non-user interface object responsible for receiving or handling a system event. A Controller defines the method for the system operation.
+
+**Benefits**:  
+1. Increased potential for reuse, and pluggable interfaces
+2. Reason about the state of the use case
+
+**Related Patterns**: 
+1. Command—In a message-handling system, each message may be represented and handled by a separate Command object.
+2. Facade—A facade controller is a kind of Facade
+3. Layers Placing domain logic in the domain layer rather than the presentation layer is part of the Layers pattern.
+4. Pure Fabrication is an arbitrary creation of the designer, not a software class whose name is inspired by the Domain Model.
+
+# 22. GRASP: More Patterns for Assigning Responsibilities 
+- [22.1 Polymorphism](#221-polymorphism)
+- [22.2 Fabrication](#222-fabrication)
+- [22.3 Indirection](#223-indirection)
+- [22.4 Protected Variations](#224-protected-variations)
+
+## 22.1 Polymorphism
+**Note**: deals with how a general responsibility gets distributed to a set of classes or interfaces.
+
+
+**Solution**: When related alternatives or behaviors vary by type (class), assign responsibility for the behavior—using polymorphic operations—to the types for which the behavior varies.
+**Problem**: m How to handle alternatives based on type? How to create pluggable software components.
+  
+    Pluggable software components—Viewing components in client-server relationships, how can you replace one server component with another, without affecting the client? 
+
+![image29](/image/29.png)
+
+**Benefits**: 
+1. Extensions required for new variations are easy to add.
+2. New implementations can be introduced without affecting clients. 
+3. Protected Variations
+
+## 22.2 Fabrication
+
+Fabrication is a class that does not represent a concept in the problem domain, specially made up to achieve low coupling, high cohesion, and the reuse potential thereof derived (when a solution presented by the information expert pattern does not). This kind of class is called a "service".
+
+**Note**: pure fabrication implies making something up, which we do when we're desperate!  
+![image30](/image/30.png)
+
+
+**Related Patterns and Principles**:
+1. Low Coupling.
+2. High Cohesion. 
+3. A Pure Fabrication usually takes on responsibilities from the domain class that would be assigned those responsibilities based on the Expert pattern.
+
+## 22.3 Indirection
+
+**Solution**: Assign the responsibility to an intermediate object to mediate between other components or services so that they are not directly coupled.
+
+**Problem**: Where to assign a responsibility, to avoid direct coupling between two (or more)
+things? How to de-couple objects so that low coupling is supported and reuse
+potential remains higher?
+
+**Related Patterns and Principles**:
+1. Lower coupling between components. 
+2. Protected Variations.
+3. Low Coupling.
+
+## 22.4 Protected Variations
+
+**Note**: wrapping the focus of instability with an interface and using polymorphism to create various implementations of this interface.
+
+**Solution**: Identify points of predicted variation or instability; assign responsibilities to create a stable interface around them.
+
+**Problem**: How to design objects, subsystems, and systems so that the variations or instability in these elements does not have an undesirable impact on other elements?
