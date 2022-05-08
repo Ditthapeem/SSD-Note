@@ -68,6 +68,12 @@
   - [22.2 Fabrication](#222-fabrication)
   - [22.3 Indirection](#223-indirection)
   - [22.4 Protected Variations](#224-protected-variations)
+- [23 DESIGNING USE-CASE REALIZATIONS WITH GoF DESIGN PATTERNS](#23-designing-use-case-realizations-with-gof-design-patterns)
+  - [23.1 Adapter (GoF)](#231-adapter-gof)
+  - [23.2 Factory (GoF)](#232-factory-gof)
+  - [23.3 Singleton (GoF)](#233-singleton-gof)
+  - [23.4 Strategy (GoF)](#234-strategy-gof)
+  - [23.5 Composite (GoF)](#235-composite-gof)
 
 
 
@@ -708,3 +714,61 @@ potential remains higher?
 **Solution**: Identify points of predicted variation or instability; assign responsibilities to create a stable interface around them.
 
 **Problem**: How to design objects, subsystems, and systems so that the variations or instability in these elements does not have an undesirable impact on other elements?
+
+# 23 DESIGNING USE-CASE REALIZATIONS WITH GoF DESIGN PATTERNS
+- [23.1 Adapter (GoF)](#231-adapter-gof)
+- [23.2 Factory (GoF)](#232-factory-gof)
+- [23.3 Singleton (GoF)](#233-singleton-gof)
+- [23.4 Strategy (GoF)](#234-strategy-gof)
+- [23.5 Composite (GoF)](#235-composite-gof)
+
+## 23.1 Adapter (GoF)
+The **Polymorphism** pattern, and its solution, is more specifically an example of the GoF Adapter pattern.
+
+**Problem**: How to resolve incompatible interfaces, or provide a stable interface to similar components with different interfaces?
+
+**Solution**: Convert the original interface of a component into another interface, through an intermediate adapter object.
+
+![image31](/image/31.png)
+
+## 23.2 Factory (GoF)
+
+**Problem**: Adapter pattern solution for external services with varying interfaces, who creates the adapters?
+
+    A common alternative in this case is to apply the Factory (or Concrete Factory) pattern, in which a Pure Fabrication "factory" object is defined to create objects.
+
+**Benefits**: 
+1. Separate the responsibility of complex creation into cohesive helper objects. 
+2. Hide potentially complex creation logic. 
+3. Allow introduction of performance-enhancing memory management strategies, such as object caching or recycling. 
+
+**Related Patterns**: Factories are often accessed with the Singleton pattern.
+
+![image32](/image/32.png)
+
+## 23.3 Singleton (GoF)
+
+A software design pattern that restricts the instantiation of a class to one "single" instance. This is useful when exactly one object is needed to coordinate actions across the system. 
+
+**Solution**:  pass the ServicesFactory instance around as a parameter to wherever a visibility need is discovered for it, or to initialize the objects that need visibility to it, with a permanent reference.
+
+![image33](/image/33.png)
+
+**Related Patterns**: Factories are often accessed with the Singleton pattern.
+
+## 23.4 Strategy (GoF)
+A behavioral software design pattern that enables selecting an algorithm at runtime. Instead of implementing a single algorithm directly, code receives run-time instructions as to which in a family of algorithms to use.
+
+**Problem**: How to design for varying, but related, algorithms or policies? How to design for the ability to change these algorithms or policies?
+
+**Solution**: Define each algorithm/policy/strategy in a separate class, with a common interface.
+
+![image34](/image/34.png)
+
+## 23.5 Composite (GoF)
+
+A partitioning design pattern. The composite pattern describes a group of objects that are treated the same way as a single instance of the same type of object. The intent of a composite is to "compose" objects into tree structures to represent part-whole hierarchies.
+
+**Problem**: How to treat a group or composition structure of objects the same way(poly-morphically) as a non-composite (atomic) object?
+
+**Solution**: Define classes for composite and atomic objects so that they implement the same interface.
